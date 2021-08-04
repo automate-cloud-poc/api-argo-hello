@@ -1,0 +1,14 @@
+# Default values for api-hello.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+name: argo-hello
+
+deploy:
+  replicaCount: 1
+  image:
+    repository: gcr.io/multi-tenant-project/argo-hello
+    tag: latest
+
+service:
+  port: 8080
