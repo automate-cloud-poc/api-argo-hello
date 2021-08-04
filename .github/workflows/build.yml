@@ -10,7 +10,7 @@ on:
 env:
   PROJECT_ID: ${{ secrets.GKE_PROJECT }}
   GKE_CLUSTER: ${{ github.event.inputs.cluster }}
-  IMAGE: api-hello
+  IMAGE: argo-hello
   IMAGE_TAG: ${{ github.event.inputs.tag }}
   REGISTRY: ghcr.io
 
