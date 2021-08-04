@@ -1,6 +1,6 @@
 {{- if .Values.gateway }}
 
-{{- $svcPort := .Values.service.port -}}
+{{- $svcPort := .Values.gateway.port -}}
 {{- $name := .Values.name -}}
 
 apiVersion: networking.istio.io/v1alpha3
