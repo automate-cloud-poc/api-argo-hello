@@ -7,7 +7,7 @@ name: argo-hello
 deploy:
   replicaCount: 1
   image:
-    repository: gcr.io/multi-region-master/argo-hello
+    repository: gcr.io/multi-tenant-project/argo-hello
     tag: latest
 
 service:
