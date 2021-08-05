@@ -18,5 +18,9 @@ func main() {
 		fmt.Println("log backup")
 		return c.String(http.StatusOK, "Hello, from argo deploy from v1! version 0.0.4")
 	})
+	e.GET("/argo/hello/auth", func(c echo.Context) error {
+		log.Println("contain auth routes")
+		return c.String(http.StatusOK, "hello, did you pass it!?")
+	})
 	e.Logger.Fatal(e.Start(":8080"))
 }
