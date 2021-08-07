@@ -8,6 +8,8 @@ import (
 	"github.com/labstack/echo/v4"
 )
 
+var GitCommit string
+
 func main() {
 	e := echo.New()
 	e.GET("/health", func(c echo.Context) error {
@@ -16,7 +18,7 @@ func main() {
 	e.GET("/argo/hello", func(c echo.Context) error {
 		log.Println("my hello log")
 		fmt.Println("log backup")
-		return c.String(http.StatusOK, "Hello, from argo deploy from v1! version 0.0.4")
+		return c.String(http.StatusOK, fmt.Sprintf("Hello, from argo deploy from commit %s", GitCommit))
 	})
 	e.GET("/argo/hello/auth", func(c echo.Context) error {
 		log.Println("contain auth routes")
