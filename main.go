@@ -18,7 +18,7 @@ func main() {
 	e.GET("/argo/hello", func(c echo.Context) error {
 		log.Println("my hello log")
 		fmt.Println("log backup")
-		return c.String(http.StatusOK, fmt.Sprintf("Hello, from argo deploy from commit %s", GitCommit))
+		return c.String(http.StatusOK, fmt.Sprintf("Hello, from argo! commit %s", GitCommit))
 	})
 	e.GET("/argo/hello/auth", func(c echo.Context) error {
 		log.Println("contain auth routes")
